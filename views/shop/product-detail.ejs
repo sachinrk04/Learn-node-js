@@ -10,6 +10,8 @@
         </div>
         <h2><%= product.price %></h2>
         <p><%= product.descreiption %></p>
-        <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+        <% if (isAuthenticated) { %>
+            <%- include('../includes/add-to-cart.ejs', {product: product}) %>
+        <% } %>
     </main>
 <%- include('../includes/end.ejs') %>
