@@ -51,7 +51,7 @@ exports.postAddProduct = (req, res, next) => {
                 price: price,
                 descreiption: descreiption
             },
-            errorMessage: errors.array()[0].msg,
+            errorMessage: errors.array()[0].msg, 
             validationErrors: errors.array()
         });
     }
